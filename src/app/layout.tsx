@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SolanaWalletProvider } from "../../context/WalletProvider";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/bg.png')] bg-cover bg-no-repeat h-screen`}
       >
-        <main className="flex-grow max-w-full p-0 m-0">{children}</main> 
+        <SolanaWalletProvider>
+        <main className="flex-grow max-w-full p-0 m-0">{children}</main>
+        </SolanaWalletProvider> 
       </body>
     </html>
   );

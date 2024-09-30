@@ -5,7 +5,7 @@ export default function page() {
   return (
     <div className='flex flex-col h-screen mx-2 my-4 justify-center'>
       <h1 className='text-white text-center font-extrabold text-2xl py-10'>CREATE AN ACCOUNT</h1>
-      <form action="" className='' autoComplete='off'>
+      <form action="" className='flex flex-col justify-center' autoComplete='off'>
         <fieldset className='mb-5'>
           <label htmlFor="email" className='text-white font-bold py-1'>Email</label>
           <input 
@@ -41,9 +41,9 @@ export default function page() {
           />
         </fieldset>
         <p className='text-white font-bold leading-6 py-5 text-center'>By signing up on <Link href='/' className='text-primary'>SOLBOX</Link>, you agree to our 
-          <Link href='' className='text-primary'>Terms of Service</Link> and <Link href='' className='text-primary'>Privacy Policy</Link>.</p>
+        <Link href='' className='text-primary'>Terms of Service</Link> and <Link href='' className='text-primary'>Privacy Policy</Link>.</p>
 
-        <button className='mt-10 p-3 font-bold text-2xl bg-primary text-white rounded-xl w-full text-center'>Sign up</button>
+        <Link href="/wallet" className='mt-10 p-3 font-bold text-2xl bg-primary text-white rounded-xl w-full text-center'>Sign up</Link>
         <p className='text-white py-2 font-semibold text-center'>Have a user account? <Link href='/login' className='text-primary pl-3'>Log in</Link></p>
       </form>
     </div>
